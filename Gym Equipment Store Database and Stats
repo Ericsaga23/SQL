@@ -1,0 +1,32 @@
+--Create Gym Equipment store database
+
+CREATE TABLE Equipment (item INTEGER PRIMARY KEY , product TEXT, name TEXT, lb INTEGER, price INTEGER );
+
+INSERT INTO Equipment VALUES (1, "PLATES", "REP", 10 , 69.99);
+INSERT INTO Equipment VALUES (2, "PLATES", "REP", 15 , 89.99);
+INSERT INTO Equipment VALUES (3, "PLATES", "REP", 25 , 129.99);
+INSERT INTO Equipment VALUES (4, "PLATES", "REP", 35 , 159.99);
+INSERT INTO Equipment VALUES (5, "PLATES", "REP", 45 , 209.99);
+INSERT INTO Equipment VALUES (6, "DUMBBELL", "ROUGE", 5, 45);
+INSERT INTO Equipment VALUES (7, "DUMBBELL", "ROUGE", 10, 80);
+INSERT INTO Equipment VALUES (8, "DUMBBELL", "ROUGE", 15, 115);
+INSERT INTO Equipment VALUES (9, "DUMBBELL", "ROUGE", 20, 155);
+INSERT INTO Equipment VALUES (10, "DUMBBELL", "ROUGE", 25, 190);
+INSERT INTO Equipment VALUES (11, "DUMBBELL", "ROUGE", 30, 225);
+INSERT INTO Equipment VALUES (12, "DUMBBELL", "ROUGE", 35, 260);
+INSERT INTO Equipment VALUES (13, "DUMBBELL", "ROUGE", 40, 295);
+INSERT INTO Equipment VALUES (14, "DUMBBELL", "ROUGE", 45, 330);
+INSERT INTO Equipment VALUES (15, "DUMBBELL", "ROUGE", 50, 360);
+INSERT INTO Equipment VALUES (16, "DUMBBELL", "ROUGE", 55, 395);
+INSERT INTO Equipment VALUES (17, "BARBELL", "ROUGE", 45, 560);
+
+--Shows the price for all the products of an specific equipment
+SELECT product, SUM(price) From Equipment 
+GROUP BY product;
+
+--Organizes the stores product
+SELECT product, price, lb FROM Equipment
+ORDER BY PRODUCT;
+
+--Shows products under your budget
+SELECT * FROM Equipment WHERE price < 200 ORDER BY price DESC;
