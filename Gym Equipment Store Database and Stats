@@ -1,5 +1,3 @@
---Create Gym Equipment store database
-
 CREATE TABLE Equipment (item INTEGER PRIMARY KEY , product TEXT, name TEXT, lb INTEGER, price INTEGER );
 
 INSERT INTO Equipment VALUES (1, "PLATES", "REP", 10 , 69.99);
